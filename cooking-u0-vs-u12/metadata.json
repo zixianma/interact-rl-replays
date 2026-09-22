@@ -1,0 +1,239 @@
+{
+  "title": "Cooking policy evaluation",
+  "model": "Qwen3.5-4B",
+  "user": "Gemini 3.7 Flash \u00b7 classic novice",
+  "image_policy": "Newest observation frame every 10 policy turns, plus flagged/first/final turns",
+  "checkpoints": [
+    {
+      "directory": "update-0",
+      "label": "Update 0",
+      "description": "Base policy",
+      "status": "complete",
+      "metrics": {
+        "eval/checkpoint_label": "update-0",
+        "eval/checkpoint_update": 0,
+        "eval/decision_cap_reached": 0.56,
+        "eval/episodes": 150,
+        "eval/false_flags": 2.1466666666666665,
+        "eval/invalid_response_fraction": 0.05609068205883342,
+        "eval/outcome/burned": 0.03333333333333333,
+        "eval/outcome/timeout": 0.6,
+        "eval/outcome/won": 0.28,
+        "eval/outcome/wrong_serve": 0.08666666666666667,
+        "eval/prevented_errors": 0.14666666666666667,
+        "eval/reward": 0.24103,
+        "eval/step": 0,
+        "eval/success": 0.28,
+        "eval/task_macro_success": 0.28,
+        "eval/tasks": 150,
+        "eval/train/episodes": 120,
+        "eval/train/reward": 0.234025,
+        "eval/train/success": 0.275,
+        "eval/train/task_macro_success": 0.275,
+        "eval/turns": 160.14666666666668,
+        "eval/validation/episodes": 30,
+        "eval/validation/reward": 0.26905,
+        "eval/validation/success": 0.3,
+        "eval/validation/task_macro_success": 0.3
+      },
+      "episodes": 150,
+      "completed": 150,
+      "expected": 150,
+      "aggregate": {
+        "outcomes": {
+          "won": 42,
+          "wrong_serve": 13,
+          "timeout": 90,
+          "burned": 5
+        },
+        "cells": {
+          "easy_nops_hard_map": {
+            "episodes": 10,
+            "successes": 8
+          },
+          "easy_nops_medium_map": {
+            "episodes": 10,
+            "successes": 10
+          },
+          "expert_nops_hard_map": {
+            "episodes": 20,
+            "successes": 2
+          },
+          "expert_nops_medium_map": {
+            "episodes": 20,
+            "successes": 1
+          },
+          "hard_nops_hard_map": {
+            "episodes": 15,
+            "successes": 4
+          },
+          "hard_nops_medium_map": {
+            "episodes": 15,
+            "successes": 5
+          },
+          "master_nops_hard_map": {
+            "episodes": 20,
+            "successes": 1
+          },
+          "master_nops_medium_map": {
+            "episodes": 20,
+            "successes": 0
+          },
+          "medium_nops_hard_map": {
+            "episodes": 10,
+            "successes": 5
+          },
+          "medium_nops_medium_map": {
+            "episodes": 10,
+            "successes": 6
+          }
+        },
+        "errors": {
+          "add_foreign": {
+            "episodes": 27,
+            "successes": 7
+          },
+          "mis_prep": {
+            "episodes": 16,
+            "successes": 5
+          },
+          "forget_next_step": {
+            "episodes": 17,
+            "successes": 7
+          },
+          "omit_subgoal": {
+            "episodes": 14,
+            "successes": 5
+          },
+          "search": {
+            "episodes": 25,
+            "successes": 6
+          },
+          "serve_raw": {
+            "episodes": 13,
+            "successes": 1
+          },
+          "leave_unattended": {
+            "episodes": 22,
+            "successes": 8
+          },
+          "wrong_order": {
+            "episodes": 11,
+            "successes": 2
+          },
+          "repeat_step": {
+            "episodes": 5,
+            "successes": 1
+          }
+        }
+      }
+    },
+    {
+      "directory": "update-12",
+      "label": "Update 12",
+      "description": "Trained checkpoint",
+      "status": "running",
+      "metrics": {
+        "eval/episodes": 149,
+        "eval/success": 0.3959731543624161,
+        "eval/reward": 0.3720268456375839,
+        "eval/decision_cap_reached": 0.47651006711409394,
+        "eval/train/episodes": 120,
+        "eval/train/success": 0.39166666666666666,
+        "eval/validation/episodes": 29,
+        "eval/validation/success": 0.41379310344827586
+      },
+      "episodes": 149,
+      "completed": 149,
+      "expected": 150,
+      "aggregate": {
+        "outcomes": {
+          "won": 59,
+          "wrong_serve": 11,
+          "timeout": 76,
+          "burned": 3
+        },
+        "cells": {
+          "easy_nops_hard_map": {
+            "episodes": 10,
+            "successes": 9
+          },
+          "easy_nops_medium_map": {
+            "episodes": 10,
+            "successes": 8
+          },
+          "expert_nops_hard_map": {
+            "episodes": 20,
+            "successes": 6
+          },
+          "expert_nops_medium_map": {
+            "episodes": 20,
+            "successes": 5
+          },
+          "hard_nops_hard_map": {
+            "episodes": 15,
+            "successes": 1
+          },
+          "hard_nops_medium_map": {
+            "episodes": 15,
+            "successes": 6
+          },
+          "master_nops_hard_map": {
+            "episodes": 19,
+            "successes": 2
+          },
+          "master_nops_medium_map": {
+            "episodes": 20,
+            "successes": 4
+          },
+          "medium_nops_hard_map": {
+            "episodes": 10,
+            "successes": 9
+          },
+          "medium_nops_medium_map": {
+            "episodes": 10,
+            "successes": 9
+          }
+        },
+        "errors": {
+          "add_foreign": {
+            "episodes": 27,
+            "successes": 12
+          },
+          "mis_prep": {
+            "episodes": 16,
+            "successes": 6
+          },
+          "forget_next_step": {
+            "episodes": 17,
+            "successes": 8
+          },
+          "omit_subgoal": {
+            "episodes": 14,
+            "successes": 5
+          },
+          "search": {
+            "episodes": 25,
+            "successes": 11
+          },
+          "serve_raw": {
+            "episodes": 13,
+            "successes": 3
+          },
+          "leave_unattended": {
+            "episodes": 22,
+            "successes": 6
+          },
+          "wrong_order": {
+            "episodes": 10,
+            "successes": 5
+          },
+          "repeat_step": {
+            "episodes": 5,
+            "successes": 3
+          }
+        }
+      }
+    }
+  ]
+}
