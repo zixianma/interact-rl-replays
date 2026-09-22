@@ -1,0 +1,65 @@
+[
+  {
+    "id": "prevent-extra-bun",
+    "title": "Stops an irreversible repeat before it happens",
+    "split": "validation",
+    "scenario": "s1_b3_medium_nops_hard_map_4_repeat_step",
+    "error": "repeat_step",
+    "summary": "The base policy notices the extra bun after it has already been added. Update 12 repeatedly blocks the action, names the completed bun layer, and redirects the novice to cheese.",
+    "takeaway": "late correction after extra bun \u2192 early prevention and recovery",
+    "turns": {
+      "update-0": [
+        176,
+        177,
+        181
+      ],
+      "update-12": [
+        87,
+        89,
+        90
+      ]
+    }
+  },
+  {
+    "id": "recover-from-wandering",
+    "title": "Turns the same wandering error into a successful recovery",
+    "split": "train",
+    "scenario": "s1_b3_easy_nops_hard_map_4_search",
+    "error": "search",
+    "summary": "Both policies identify the novice's detour. The trained policy gives a direct destination and ultimately completes the dish in less than half as many turns, with fewer false alarms.",
+    "takeaway": "wrong serve in 93 turns \u2192 win in 45 turns",
+    "turns": {
+      "update-0": [
+        25,
+        26,
+        27
+      ],
+      "update-12": [
+        25,
+        26,
+        27
+      ]
+    }
+  },
+  {
+    "id": "reject-foreign-corn",
+    "title": "Preserves the recipe when the novice proposes corn",
+    "split": "train",
+    "scenario": "s1_b3_master_nops_hard_map_1_add_foreign",
+    "error": "add_foreign",
+    "summary": "The base rollout gets stuck contradicting the novice about a correct tortilla\u2013rice transition and times out. Update 12 reaches the later choice point, rejects corn explicitly, and completes the order.",
+    "takeaway": "state confusion and timeout \u2192 constraint-aware interception and win",
+    "turns": {
+      "update-0": [
+        49,
+        50,
+        51
+      ],
+      "update-12": [
+        126,
+        128,
+        130
+      ]
+    }
+  }
+]
