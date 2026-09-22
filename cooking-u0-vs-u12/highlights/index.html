@@ -3,11 +3,11 @@
 <title>Cooking RL · Curated policy improvements</title>
 <style>
 :root{font:15px Inter,ui-sans-serif,system-ui,sans-serif;color:#e8edf5;background:#0b1119;--line:#304057;--panel:#141f2d;--muted:#a9b8c9;--blue:#69c8ff;--green:#76dda4;--red:#ff9f98}*{box-sizing:border-box}body{margin:0}header{padding:28px max(24px,calc((100vw - 1320px)/2));background:linear-gradient(135deg,#1b2d43,#101926);border-bottom:1px solid var(--line)}h1{font-size:31px;margin:8px 0}h2{font-size:23px;margin:7px 0}h3{margin:0}p{line-height:1.55;color:#c4cfdd;max-width:950px}a{color:var(--blue)}.pill,.metrics span{display:inline-block;padding:5px 9px;border:1px solid #455c76;border-radius:999px;font-size:12px}.voice{margin-top:12px;color:var(--muted)}.voice b:first-child{color:#8bd8ff}.voice b:last-child{color:#ffd18a}nav{margin-top:14px}button{font:inherit;color:#e8edf5;background:#203149;border:1px solid #4a607a;border-radius:7px;padding:7px 11px;margin-right:5px;cursor:pointer}button.active{border-color:var(--blue);background:#29435c}main{max-width:1380px;margin:auto;padding:24px}.highlight{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:22px}.eyebrow{color:var(--blue);text-transform:uppercase;letter-spacing:.08em;font-size:12px}.task-instruction{max-width:1000px;margin:12px 0;padding:11px 14px;border-left:3px solid var(--blue);background:#172638;border-radius:0 8px 8px 0}.task-instruction b{font-size:12px;color:var(--blue);text-transform:uppercase;letter-spacing:.06em}.task-instruction p{margin:5px 0 0;color:#eef4fb}.takeaway{display:inline-block;color:var(--green);background:#142c27;border:1px solid #2d6555;border-radius:8px;padding:8px 11px;margin:2px 0 16px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.policy{min-width:0;background:#101925;border:1px solid #2e4056;border-radius:11px;padding:12px}.policy-callout{font-weight:700;border-left:3px solid currentColor;padding:7px 9px;margin:9px 0;background:#172230}.good{color:var(--green)}.bad{color:var(--red)}.metrics{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0}video{display:block;width:100%;aspect-ratio:16/9;background:#05080c;border-radius:8px}details{margin-top:12px;color:var(--muted)}summary{cursor:pointer}code{font-size:12px}@media(max-width:900px){.pair{grid-template-columns:1fr}header{padding:20px}main{padding:14px}}
-figure{margin:18px 0 0;padding-top:12px;border-top:1px solid var(--line)}figcaption{color:var(--muted);margin-bottom:8px}figure img{display:block;width:100%;height:auto;border-radius:8px}.image-note{font-size:13px;color:var(--muted)}.utterance{padding:10px 12px;background:#172638;border-radius:8px;margin-top:8px}.utterance b{font-size:12px;text-transform:uppercase}.utterance p{margin:5px 0 0;color:#e8edf5}.user b{color:#8bd8ff}.assistant b{color:#ffd18a}
 </style></head><body>
 <header><span class="pill">CookingSim</span> <span class="pill">Qwen3.5-4B</span> <span class="pill">Gemini 3.7 Flash novice</span>
 <h1>What changed after RL?</h1>
-<p>Selected screenshots and exact dialogue from matched Update 0 and Update 12 scenarios. Each image is aligned to its displayed policy turn. Click a screenshot to enlarge it. Because Gemini and the simulator are stochastic, these are qualitative examples rather than deterministic causal replays.</p>
+<p>Curated side-by-side video segments from matched Update 0 and Update 12 scenarios. Images are aligned to their displayed policy turns. Because Gemini and the simulator are stochastic, these are qualitative examples rather than deterministic causal replays.</p>
+<div class="voice"><b>Gemini user:</b> Lessac voice &nbsp;·&nbsp; <b>Qwen assistant:</b> Ryan voice. Each clip displays the utterance currently being spoken.</div>
 <nav><button class="active" data-filter="all">All</button><button data-filter="validation">Validation</button><button data-filter="train">Training</button> &nbsp; <a href="../">Open full 149-pair replay</a></nav></header>
 <main>
     <article class="highlight" data-split="validation">
@@ -25,13 +25,8 @@ figure{margin:18px 0 0;padding-top:12px;border-top:1px solid var(--line)}figcapt
             <span>200 turns</span>
             <span>0 false flags</span>
           </div>
-          <figure>
-              <figcaption>Policy turn 182/200 · tick 362</figcaption>
-              <a href="screenshots/prevent-extra-bun-update-0-turn-182.png" target="_blank" rel="noopener"><img src="screenshots/prevent-extra-bun-update-0-turn-182.png" loading="lazy" alt="Update 0 · base: turn 182. Observation shown to the policy at this turn."></a>
-              <p class="image-note">Observation shown to the policy at this turn.</p>
-              <div class="utterance user"><b>Gemini user</b><p>Oh no, you&#x27;re right, I accidentally scooped another bun on top! Since I can&#x27;t take it off, do I have to throw this whole plate away and start over? Let me know what to do next.</p></div>
-              <div class="utterance assistant"><b>Qwen assistant</b><p>Don&#x27;t throw it away, it&#x27;s not trashable yet. You need to save your plate. Go to the trash bin in the center aisle. Pick up the plate and dump the burger inside so your hands are free to grab a correct plate. Then go to the cheese station to fix the order.</p></div>
-            </figure>
+          <video controls preload="metadata" src="clips/prevent-extra-bun-update-0.mp4?v=exact-frame-1"></video>
+
         </section>
         <section class="policy">
           <h3>Update 12 · RL</h3>
@@ -41,13 +36,8 @@ figure{margin:18px 0 0;padding-top:12px;border-top:1px solid var(--line)}figcapt
             <span>105 turns</span>
             <span>2 false flags</span>
           </div>
-          <figure>
-              <figcaption>Policy turn 90/105 · tick 178</figcaption>
-              <a href="screenshots/prevent-extra-bun-update-12-turn-90.png" target="_blank" rel="noopener"><img src="screenshots/prevent-extra-bun-update-12-turn-90.png" loading="lazy" alt="Update 12 · RL: turn 90. Observation shown to the policy at this turn."></a>
-              <p class="image-note">Observation shown to the policy at this turn.</p>
-              <div class="utterance user"><b>Gemini user</b><p>I&#x27;m already right at the bun crate, so I&#x27;m just going to finish scooping this extra bun on real quick! Once I&#x27;ve got it, I&#x27;ll definitely set the plate down on that middle counter and head for the cheese.</p></div>
-              <div class="utterance assistant"><b>Qwen assistant</b><p>Stop adding buns. The bun layer is complete. Put the plate down on the empty counter in the middle of the kitchen, then go get the cheese crate.</p></div>
-            </figure>
+          <video controls preload="metadata" src="clips/prevent-extra-bun-update-12.mp4?v=exact-frame-1"></video>
+
         </section></div>
       <details><summary>Scenario ID and selected policy turns</summary>
         <code>s1_b3_medium_nops_hard_map_4_repeat_step</code><br>
@@ -70,19 +60,8 @@ figure{margin:18px 0 0;padding-top:12px;border-top:1px solid var(--line)}figcapt
             <span>200 turns</span>
             <span>0 false flags</span>
           </div>
-          <figure>
-              <figcaption>Policy turn 196/200 · tick 390</figcaption>
-              <a href="screenshots/track-missing-cheese-update-0-turn-196.png" target="_blank" rel="noopener"><img src="screenshots/track-missing-cheese-update-0-turn-196.png" loading="lazy" alt="Update 0 · base: turn 196. Outlined: bottom-left plate in the top-down view. Enlarged below; no yellow cheese is visible."></a>
-              <p class="image-note">Outlined: bottom-left plate in the top-down view. Enlarged below; no yellow cheese is visible.</p>
-              <div class="utterance user"><b>Gemini user</b><p>I know you think it&#x27;s done, but the recipe definitely says it needs raw cheese! I&#x27;m picking it up right now, can you walk me through how to get it onto the plate and serve it so I don&#x27;t mess up at the very end?</p></div>
-              <div class="utterance assistant"><b>Qwen assistant</b><p>The cheese is already on the plate. You just need to pick it up from the counter and go straight to the serving pass.</p></div>
-            </figure><figure>
-              <figcaption>Policy turn 197/200 · tick 392</figcaption>
-              <a href="screenshots/track-missing-cheese-update-0-turn-197.png" target="_blank" rel="noopener"><img src="screenshots/track-missing-cheese-update-0-turn-197.png" loading="lazy" alt="Update 0 · base: turn 197. Outlined: bottom-left plate in the top-down view. Enlarged below; no yellow cheese is visible."></a>
-              <p class="image-note">Outlined: bottom-left plate in the top-down view. Enlarged below; no yellow cheese is visible.</p>
-              <div class="utterance user"><b>Gemini user</b><p>I&#x27;m looking right at the plate and it only has the bun and meat on it! I still need to grab this raw cheese and scoop it on before I can serve it.</p></div>
-              <div class="utterance assistant"><b>Qwen assistant</b><p>The cheese is on the plate. Stop moving toward the fridge. Pick up the plate and walk to the serving pass immediately.</p></div>
-            </figure>
+          <video controls preload="metadata" src="clips/track-missing-cheese-update-0.mp4?v=exact-frame-1"></video>
+<p>Look at the bottom-left plate in the top-down view: it appears topped with meat, with no visible yellow cheese.</p>
         </section>
         <section class="policy">
           <h3>Update 12 · RL</h3>
@@ -92,19 +71,8 @@ figure{margin:18px 0 0;padding-top:12px;border-top:1px solid var(--line)}figcapt
             <span>68 turns</span>
             <span>3 false flags</span>
           </div>
-          <figure>
-              <figcaption>Policy turn 64/68 · tick 126</figcaption>
-              <a href="screenshots/track-missing-cheese-update-12-turn-64.png" target="_blank" rel="noopener"><img src="screenshots/track-missing-cheese-update-12-turn-64.png" loading="lazy" alt="Update 12 · RL: turn 64. Observation shown to the policy at this turn."></a>
-              <p class="image-note">Observation shown to the policy at this turn.</p>
-              <div class="utterance user"><b>Gemini user</b><p>Got it, I&#x27;m right here so I&#x27;ll just scoop the cheese directly onto my plate since I&#x27;m already holding it!</p></div>
-              <div class="utterance assistant"><b>Qwen assistant</b><p>Okay, I see you have the cheese. Please scoop the cheese onto your plate.</p></div>
-            </figure><figure>
-              <figcaption>Policy turn 65/68 · tick 128</figcaption>
-              <a href="screenshots/track-missing-cheese-update-12-turn-65.png" target="_blank" rel="noopener"><img src="screenshots/track-missing-cheese-update-12-turn-65.png" loading="lazy" alt="Update 12 · RL: turn 65. Observation shown to the policy at this turn."></a>
-              <p class="image-note">Observation shown to the policy at this turn.</p>
-              <div class="utterance user"><b>Gemini user</b><p>Alright, the cheese is going onto the plate right now! Since that&#x27;s the last ingredient, should I head over to the serving pass next?</p></div>
-              <div class="utterance assistant"><b>Qwen assistant</b><p>Yes, head to the serving pass to deliver the order.</p></div>
-            </figure>
+          <video controls preload="metadata" src="clips/track-missing-cheese-update-12.mp4?v=exact-frame-1"></video>
+
         </section></div>
       <details><summary>Scenario ID and selected policy turns</summary>
         <code>s1_b3_medium_nops_hard_map_2_serve_raw</code><br>
@@ -127,13 +95,8 @@ figure{margin:18px 0 0;padding-top:12px;border-top:1px solid var(--line)}figcapt
             <span>73 turns</span>
             <span>3 false flags</span>
           </div>
-          <figure>
-              <figcaption>Policy turn 51/73 · tick 100</figcaption>
-              <a href="screenshots/reject-foreign-corn-update-0-turn-51.png" target="_blank" rel="noopener"><img src="screenshots/reject-foreign-corn-update-0-turn-51.png" loading="lazy" alt="Update 0 · base: turn 51. Observation shown to the policy at this turn."></a>
-              <p class="image-note">Observation shown to the policy at this turn.</p>
-              <div class="utterance user"><b>Gemini user</b><p>Oh, that makes sense! Since I&#x27;m already holding the plate with the tortilla, I&#x27;ll just walk straight over to the pot by the left wall and scoop the rice onto it right now. Then I&#x27;ll set it down.</p></div>
-              <div class="utterance assistant"><b>Qwen assistant</b><p>Stop. I think you have made a mistake: you are placing the tortilla onto the TEMPORARY TRAY (the small plate on the counter), not onto your MAIN SERVING PLATE (the white plate you are holding). You need to scoop the tortilla directly onto the white plate in your hand. Do not touch the temporary tray; just put the tortilla on the plate you are holding.</p></div>
-            </figure>
+          <video controls preload="metadata" src="clips/reject-foreign-corn-update-0.mp4?v=exact-frame-1"></video>
+
         </section>
         <section class="policy">
           <h3>Update 12 · RL</h3>
@@ -143,13 +106,8 @@ figure{margin:18px 0 0;padding-top:12px;border-top:1px solid var(--line)}figcapt
             <span>190 turns</span>
             <span>6 false flags</span>
           </div>
-          <figure>
-              <figcaption>Policy turn 129/190 · tick 256</figcaption>
-              <a href="screenshots/reject-foreign-corn-update-12-turn-129.png" target="_blank" rel="noopener"><img src="screenshots/reject-foreign-corn-update-12-turn-129.png" loading="lazy" alt="Update 12 · RL: turn 129. Observation shown to the policy at this turn."></a>
-              <p class="image-note">Observation shown to the policy at this turn.</p>
-              <div class="utterance user"><b>Gemini user</b><p>Actually, I am definitely holding the plate right now—I can feel it in my hands! I&#x27;m just heading over to the corn crate to scoop some up next.</p></div>
-              <div class="utterance assistant"><b>Qwen assistant</b><p>Stop. You cannot add corn to this plate. The recipe requires rice, tomato, and lettuce. Look for those ingredients in the crates.</p></div>
-            </figure>
+          <video controls preload="metadata" src="clips/reject-foreign-corn-update-12.mp4?v=exact-frame-1"></video>
+
         </section></div>
       <details><summary>Scenario ID and selected policy turns</summary>
         <code>s1_b3_master_nops_hard_map_1_add_foreign</code><br>
