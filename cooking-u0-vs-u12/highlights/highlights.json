@@ -26,7 +26,7 @@
     "split": "train",
     "scenario": "s1_b3_medium_nops_hard_map_2_serve_raw",
     "error": "serve_raw",
-    "summary": "The base policy insists that cheese is already plated despite the novice and image showing otherwise. Update 12 tracks the cheese placement and then gives the correct serving instruction.",
+    "summary": "The base policy insists that cheese is already plated while the novice says it is missing. The bottom-left plate in the top-down view appears to have meat on top, with no visible cheese. Update 12 guides the final cheese step and then serving.",
     "takeaway": "hallucinated completion and timeout \u2192 grounded final-step guidance and win",
     "turns": {
       "update-0": [
