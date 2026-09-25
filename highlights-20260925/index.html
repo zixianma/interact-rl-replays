@@ -22,11 +22,15 @@ video,img{max-width:100%}video,.screenshots img{display:block;width:100%;border-
 blockquote{font-size:.85rem;line-height:1.42;max-height:220px;overflow:auto;margin:8px 0;padding:9px;background:#f5f8fb;border-left:3px solid var(--blue);white-space:pre-wrap}
 .muted,.scenario{color:var(--muted);font-size:.82rem}.scenario{display:block;overflow-wrap:anywhere;margin-top:12px}
 .diagnostic{background:#fff7e9;border:1px solid #ecd4a4;border-radius:12px;padding:17px 20px;margin-top:20px}
+.narration{margin:10px 0 4px;padding:7px 0;border-top:0}.narration audio,.intro-audio{display:block;width:min(100%,420px);margin:8px 0}
 footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
 </style></head><body>
 <header><div class="eyebrow">Gemini 3.7 Flash · classic-novice user · update 0 vs update 12</div>
 <h1>Interaction trajectory highlights</h1>
 <p class="lead">Matched CookSim and ScreenSim examples selected from full-suite evaluations. Each outcome badge represents an independent rollout of the same frozen scenario.</p>
+<audio class="intro-audio" controls preload="none" src="audio/overview.mp3" aria-label="Listen to the gallery overview"></audio>
+<details class="narration"><summary>Read the spoken overview</summary><p class="muted">These Gemini three point seven classic-novice highlights were selected from matched full-suite evaluations. Each Cook Sim badge is one evaluation of the same scenario. Eight cards show three base losses and two trained wins so far. The Screen Sim cards are illustrative single-run contrasts with variable repeat outcomes. Open a card to inspect the evidence.</p></details>
+<p class="muted">Spoken overview and card guides use the same local synthetic voice as the earlier narrated highlights. Every guide has a transcript.</p>
 <div class="note">CookSim cards below were selected from all 150 scenarios because every base repeat failed and both currently verified RL repeats succeeded. The third CookSim update-12 pass is still running. ScreenSim cards show informative individual trajectories; its three-repeat success rates are variable, so the examples do not establish a consistent aggregate gain.</div>
 <details class="hero-detail"><summary>View the earlier CookSim bun-intervention figure</summary>
 <img class="hero" src="bun-dialogue.png" alt="CookSim base and RL extra-bun interaction figure">
@@ -38,6 +42,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Steak Frites: forget next step</h3>
   <p class="recipe">Steak Frites — steak(cooked), potato(cooked), potato(cooked) — plated in exactly this order.</p>
   <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_expert_nops_hard_map_1_forget_next_step.mp3"></audio><p class="muted">Transcript: Steak Frites, forgetting the next step. In the first base rollout, the cook stalls near serving and the order times out. The trained rollout finishes. Across the completed repeat evaluations, the base policy lost three times and update twelve won twice.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
   <details><summary>Watch matched first-pass trajectories</summary>
@@ -54,6 +59,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Steak Frites: search</h3>
   <p class="recipe">Steak Frites — steak(cooked), potato(cooked), potato(cooked) — plated in exactly this order.</p>
   <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_expert_nops_hard_map_2_search.mp3"></audio><p class="muted">Transcript: Steak Frites, searching the kitchen. The first base rollout gets tangled in locating and tracking ingredients, then times out. The trained rollout completes the order. Across repeats, base lost three times and update twelve won twice.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
   <details><summary>Watch matched first-pass trajectories</summary>
@@ -70,6 +76,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Steak Frites: mis prep</h3>
   <p class="recipe">Steak Frites — steak(cooked), potato(cooked), potato(cooked) — plated in exactly this order.</p>
   <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_expert_nops_hard_map_4_mis_prep.mp3"></audio><p class="muted">Transcript: Steak Frites, recovering from a wrong preparation step. The novice handles the wrong item. Compare the assistants&#x27; responses in the paired videos. Base lost all three repeat evaluations; update twelve won both completed repeats.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
   <details><summary>Watch matched first-pass trajectories</summary>
@@ -86,6 +93,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Steak Frites: add foreign</h3>
   <p class="recipe">Steak Frites — steak(cooked), potato(cooked), potato(cooked) — plated in exactly this order.</p>
   <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_expert_nops_hard_map_5_add_foreign.mp3"></audio><p class="muted">Transcript: Steak Frites, an extra-ingredient intervention. The first base rollout times out after confusion about moving food between plates. The trained rollout serves the order. Across repeats, base lost three times and update twelve won twice.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">burned</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
   <details><summary>Watch matched first-pass trajectories</summary>
@@ -102,6 +110,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Steak Frites: add foreign</h3>
   <p class="recipe">Steak Frites — steak(cooked), potato(cooked), potato(cooked) — plated in exactly this order.</p>
   <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_expert_nops_medium_map_3_add_foreign.mp3"></audio><p class="muted">Transcript: Steak Frites, another extra-ingredient intervention, this time on a medium map. The first base rollout times out while the trained rollout serves. Base lost all three repeats; update twelve won both completed repeats.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">wrong_serve</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
   <details><summary>Watch matched first-pass trajectories</summary>
@@ -118,6 +127,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Loaded Burrito: add foreign</h3>
   <p class="recipe">Loaded Burrito — tortilla(raw), rice(cooked), steak(cooked), tomato(chopped), lettuce(chopped) — plated in exactly this order.</p>
   <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_master_nops_hard_map_1_add_foreign.mp3"></audio><p class="muted">Transcript: Loaded Burrito, a proposed foreign ingredient. The first base rollout gets stuck arguing about the cooking state. The trained assistant explicitly blocks corn and later finishes the order. Base lost three repeats; update twelve won two.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
   <details><summary>Watch matched first-pass trajectories</summary>
@@ -134,6 +144,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Loaded Burrito: omit subgoal</h3>
   <p class="recipe">Loaded Burrito — tortilla(raw), rice(cooked), steak(cooked), tomato(chopped), lettuce(chopped) — plated in exactly this order.</p>
   <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_master_nops_medium_map_4_omit_subgoal.mp3"></audio><p class="muted">Transcript: Loaded Burrito, an omitted recipe step. The base rollout times out while the trained rollout serves a completed order. The repeat outcome contrast is three base losses versus two update twelve wins so far.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
   <details><summary>Watch matched first-pass trajectories</summary>
@@ -150,6 +161,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Loaded Burrito: search</h3>
   <p class="recipe">Loaded Burrito — tortilla(raw), rice(cooked), steak(cooked), tomato(chopped), lettuce(chopped) — plated in exactly this order.</p>
   <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_master_nops_medium_map_5_search.mp3"></audio><p class="muted">Transcript: Loaded Burrito, searching for the next ingredient. The first base rollout loses track of the plated rice and times out. The trained rollout finishes. Base lost three repeat evaluations; update twelve won both completed repeats.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
   <details><summary>Watch matched first-pass trajectories</summary>
@@ -168,6 +180,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Preserving typing preferences</h3>
   <p class="recipe">My phone keeps changing what I type. Stop it replacing my words with what it thinks I meant, stop it turning my straight quote marks and double hyphens into curly quotes and long dashes, and get rid of the row of suggested words above the keys. But I still want misspelled words underlined, and the first letter of every sentence capitalized for me.</p>
   <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 1/3 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/keyboard_stop_correcting__c2.mp3"></audio><p class="muted">Transcript: Typing preferences. The base assistant tells the novice to turn off auto-capitalization, even though the request is to preserve it. The trained assistant instead targets predictive text. This first-run contrast is illustrative: update twelve succeeded in only one of three repeats.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">goal_met</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
   <details><summary>Inspect first-pass screen and assistant response</summary>
@@ -185,6 +198,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Getting an urgent rent payment through</h3>
   <p class="recipe">Pay my landlord, Sunset Apts, this month&#x27;s rent on QuickPay: $1,450. Use the money in my QuickPay account, not my card. It&#x27;s due today, so it has to get there right away, not in a few days. Put &#x27;April rent&#x27; in the note.</p>
   <p class="count"><b>Base 1/3 wins</b><span>→</span><b>RL 1/3 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/rent_landlord_instant__c1.mp3"></audio><p class="muted">Transcript: Urgent rent payment. In the first base rollout, the assistant points to a confirm button while the screen state is disputed. The trained assistant identifies the review screen and the text-message verification step. Each policy won one of three repeat evaluations.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span><span class="outcome won">goal_met</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">goal_met</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
   <details><summary>Inspect first-pass screen and assistant response</summary>
@@ -202,6 +216,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <h3>Finishing both theft protections</h3>
   <p class="recipe">I&#x27;m travelling somewhere sketchy this week, and if this phone gets stolen my data has to stay safe. Switch on the protection that encrypts my iCloud data end to end so that not even Apple can read it, and the protection that stops a thief who has learned my passcode from changing my Apple Account or passcode without my face. I still sign in to icloud.com from the web browser on my laptop, so that has to keep working.</p>
   <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 1/3 wins</b></p>
+  <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/lost_phone_lockdown__c1.mp3"></audio><p class="muted">Transcript: Lost-phone protection. Compare the two assistants&#x27; guidance for turning on stolen-device protection. The first trained rollout succeeds where the base rollout fails, but across three repeats the trained policy succeeded only once.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">goal_met</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
   <details><summary>Inspect first-pass screen and assistant response</summary>
