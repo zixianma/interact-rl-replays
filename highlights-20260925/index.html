@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gemini 3.7 classic-novice RL trajectory highlights</title>
+<style>
+:root{--ink:#233544;--muted:#536a7a;--blue:#32658d;--pale:#eaf3fb;--green:#28734b;--red:#af3f39;--line:#c6d7e4}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:#f5f8fb;font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header,main,footer{max-width:1180px;margin:auto;padding:24px}header{padding-top:42px}h1{font-size:clamp(2rem,4vw,3.1rem);line-height:1.08;margin:.25em 0}
+h2{font-size:1.7rem;margin:48px 0 8px}h3{font-size:1.25rem;margin:12px 0 6px}p{margin:8px 0 14px}a{color:#175783}
+.eyebrow{color:var(--blue);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.83rem}
+.lead{font-size:1.1rem;max-width:850px}.note{background:#fff;border-left:5px solid var(--blue);padding:16px 20px;border-radius:8px;max-width:930px}
+.hero-detail{border:1px solid var(--line);background:#fff;border-radius:12px;padding:13px 17px;margin-top:20px}
+.hero{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:#fff;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,485px),1fr));gap:18px;margin-top:20px;align-items:start}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 2px 8px #183a4d0d;min-width:0}
+.card-top{display:flex;gap:8px;flex-wrap:wrap}.tag{background:var(--blue);color:#fff;border-radius:100px;padding:3px 10px;font-size:.78rem;font-weight:700}
+.tag.light{background:var(--pale);color:var(--blue)}.recipe{color:var(--muted);min-height:48px}
+.count{display:flex;align-items:center;gap:10px;font-size:1.08rem}.count b:last-child{color:var(--green)}.count b:first-child{color:var(--red)}
+.repeat-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:5px 0}.repeat-row>span:first-child{width:100px;font-size:.83rem;color:var(--muted)}
+.outcome{padding:2px 7px;border-radius:5px;font-size:.76rem;font-weight:700}.outcome.won{color:var(--green);background:#e7f5ec}.outcome.failed{color:var(--red);background:#fbeeea}
+details{border-top:1px solid var(--line);margin-top:16px;padding-top:11px}summary{cursor:pointer;color:var(--blue);font-weight:700}.videos,.screenshots{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;margin-top:12px}
+video,img{max-width:100%}video,.screenshots img{display:block;width:100%;border-radius:7px;margin-top:7px;background:#111}.screenshots img{height:280px;object-fit:contain;background:#edf2f7}
+blockquote{font-size:.85rem;line-height:1.42;max-height:220px;overflow:auto;margin:8px 0;padding:9px;background:#f5f8fb;border-left:3px solid var(--blue);white-space:pre-wrap}
+.muted,.scenario{color:var(--muted);font-size:.82rem}.scenario{display:block;overflow-wrap:anywhere;margin-top:12px}
+.diagnostic{background:#fff7e9;border:1px solid #ecd4a4;border-radius:12px;padding:17px 20px;margin-top:20px}
+footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
+</style></head><body>
+<header><div class="eyebrow">Gemini 3.7 Flash · classic-novice user · update 0 vs update 12</div>
+<h1>Interaction trajectory highlights</h1>
+<p class="lead">Matched CookSim and ScreenSim examples selected from full-suite evaluations. Each outcome badge represents an independent rollout of the same frozen scenario.</p>
+<div class="note">CookSim cards below were selected from all 150 scenarios because every base repeat failed and both currently verified RL repeats succeeded. The third CookSim update-12 pass is still running. ScreenSim cards show informative individual trajectories; its three-repeat success rates are variable, so the examples do not establish a consistent aggregate gain.</div>
+<details class="hero-detail"><summary>View the earlier CookSim bun-intervention figure</summary>
+<img class="hero" src="bun-dialogue.png" alt="CookSim base and RL extra-bun interaction figure">
+<p class="muted">This figure is a single paired trajectory; repeat outcomes vary. <a href="../cooking-u0-vs-u12/highlights/">Watch the narrated highlights</a>.</p></details></header>
+<main><h2>CookSim: eight replicated outcome contrasts</h2><p>These were mined from all 150 matched scenarios. Open a card to compare first-pass trajectories; the badges include the newest verified repeat.</p>
+<div class="grid">
+<article class="card cook">
+  <div class="card-top"><span class="tag">CookSim · train</span><span class="tag light">forget next step</span></div>
+  <h3>Steak Frites: forget next step</h3>
+  <p class="recipe">Steak Frites — steak(cooked), potato(cooked), potato(cooked) — plated in exactly this order.</p>
+  <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Watch matched first-pass trajectories</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_1_forget_next_step-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_expert_nops_hard_map_1_forget_next_step.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_1_forget_next_step-update-12.jpg" src="../cooking-u0-vs-u12/videos/update-12/s1_b3_expert_nops_hard_map_1_forget_next_step.mp4"></video></div>
+    </div>
+    <p class="muted">Videos show one paired rollout. The repeat badges summarize independent full-suite evaluations of this same scenario.</p>
+  </details>
+  <small class="scenario">s1_b3_expert_nops_hard_map_1_forget_next_step</small>
+</article>
+<article class="card cook">
+  <div class="card-top"><span class="tag">CookSim · train</span><span class="tag light">search</span></div>
+  <h3>Steak Frites: search</h3>
+  <p class="recipe">Steak Frites — steak(cooked), potato(cooked), potato(cooked) — plated in exactly this order.</p>
+  <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Watch matched first-pass trajectories</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_2_search-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_expert_nops_hard_map_2_search.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_2_search-update-12.jpg" src="../cooking-u0-vs-u12/videos/update-12/s1_b3_expert_nops_hard_map_2_search.mp4"></video></div>
+    </div>
+    <p class="muted">Videos show one paired rollout. The repeat badges summarize independent full-suite evaluations of this same scenario.</p>
+  </details>
+  <small class="scenario">s1_b3_expert_nops_hard_map_2_search</small>
+</article>
+<article class="card cook">
+  <div class="card-top"><span class="tag">CookSim · train</span><span class="tag light">mis prep</span></div>
+  <h3>Steak Frites: mis prep</h3>
+  <p class="recipe">Steak Frites — steak(cooked), potato(cooked), potato(cooked) — plated in exactly this order.</p>
+  <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Watch matched first-pass trajectories</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_4_mis_prep-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_expert_nops_hard_map_4_mis_prep.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_4_mis_prep-update-12.jpg" src="../cooking-u0-vs-u12/videos/update-12/s1_b3_expert_nops_hard_map_4_mis_prep.mp4"></video></div>
+    </div>
+    <p class="muted">Videos show one paired rollout. The repeat badges summarize independent full-suite evaluations of this same scenario.</p>
+  </details>
+  <small class="scenario">s1_b3_expert_nops_hard_map_4_mis_prep</small>
+</article>
+<article class="card cook">
+  <div class="card-top"><span class="tag">CookSim · validation</span><span class="tag light">add foreign</span></div>
+  <h3>Steak Frites: add foreign</h3>
+  <p class="recipe">Steak Frites — steak(cooked), potato(cooked), potato(cooked) — plated in exactly this order.</p>
+  <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">burned</span><span class="outcome failed">timeout</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Watch matched first-pass trajectories</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_5_add_foreign-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_expert_nops_hard_map_5_add_foreign.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_5_add_foreign-update-12.jpg" src="../cooking-u0-vs-u12/videos/update-12/s1_b3_expert_nops_hard_map_5_add_foreign.mp4"></video></div>
+    </div>
+    <p class="muted">Videos show one paired rollout. The repeat badges summarize independent full-suite evaluations of this same scenario.</p>
+  </details>
+  <small class="scenario">s1_b3_expert_nops_hard_map_5_add_foreign</small>
+</article>
+<article class="card cook">
+  <div class="card-top"><span class="tag">CookSim · validation</span><span class="tag light">add foreign</span></div>
+  <h3>Steak Frites: add foreign</h3>
+  <p class="recipe">Steak Frites — steak(cooked), potato(cooked), potato(cooked) — plated in exactly this order.</p>
+  <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">wrong_serve</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Watch matched first-pass trajectories</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_expert_nops_medium_map_3_add_foreign-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_expert_nops_medium_map_3_add_foreign.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" poster="posters/s1_b3_expert_nops_medium_map_3_add_foreign-update-12.jpg" src="../cooking-u0-vs-u12/videos/update-12/s1_b3_expert_nops_medium_map_3_add_foreign.mp4"></video></div>
+    </div>
+    <p class="muted">Videos show one paired rollout. The repeat badges summarize independent full-suite evaluations of this same scenario.</p>
+  </details>
+  <small class="scenario">s1_b3_expert_nops_medium_map_3_add_foreign</small>
+</article>
+<article class="card cook">
+  <div class="card-top"><span class="tag">CookSim · train</span><span class="tag light">add foreign</span></div>
+  <h3>Loaded Burrito: add foreign</h3>
+  <p class="recipe">Loaded Burrito — tortilla(raw), rice(cooked), steak(cooked), tomato(chopped), lettuce(chopped) — plated in exactly this order.</p>
+  <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Watch matched first-pass trajectories</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_master_nops_hard_map_1_add_foreign-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_master_nops_hard_map_1_add_foreign.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" poster="posters/s1_b3_master_nops_hard_map_1_add_foreign-update-12.jpg" src="../cooking-u0-vs-u12/videos/update-12/s1_b3_master_nops_hard_map_1_add_foreign.mp4"></video></div>
+    </div>
+    <p class="muted">Videos show one paired rollout. The repeat badges summarize independent full-suite evaluations of this same scenario.</p>
+  </details>
+  <small class="scenario">s1_b3_master_nops_hard_map_1_add_foreign</small>
+</article>
+<article class="card cook">
+  <div class="card-top"><span class="tag">CookSim · validation</span><span class="tag light">omit subgoal</span></div>
+  <h3>Loaded Burrito: omit subgoal</h3>
+  <p class="recipe">Loaded Burrito — tortilla(raw), rice(cooked), steak(cooked), tomato(chopped), lettuce(chopped) — plated in exactly this order.</p>
+  <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Watch matched first-pass trajectories</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_master_nops_medium_map_4_omit_subgoal-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_master_nops_medium_map_4_omit_subgoal.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" poster="posters/s1_b3_master_nops_medium_map_4_omit_subgoal-update-12.jpg" src="../cooking-u0-vs-u12/videos/update-12/s1_b3_master_nops_medium_map_4_omit_subgoal.mp4"></video></div>
+    </div>
+    <p class="muted">Videos show one paired rollout. The repeat badges summarize independent full-suite evaluations of this same scenario.</p>
+  </details>
+  <small class="scenario">s1_b3_master_nops_medium_map_4_omit_subgoal</small>
+</article>
+<article class="card cook">
+  <div class="card-top"><span class="tag">CookSim · train</span><span class="tag light">search</span></div>
+  <h3>Loaded Burrito: search</h3>
+  <p class="recipe">Loaded Burrito — tortilla(raw), rice(cooked), steak(cooked), tomato(chopped), lettuce(chopped) — plated in exactly this order.</p>
+  <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 2/2 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Watch matched first-pass trajectories</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_master_nops_medium_map_5_search-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_master_nops_medium_map_5_search.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" poster="posters/s1_b3_master_nops_medium_map_5_search-update-12.jpg" src="../cooking-u0-vs-u12/videos/update-12/s1_b3_master_nops_medium_map_5_search.mp4"></video></div>
+    </div>
+    <p class="muted">Videos show one paired rollout. The repeat badges summarize independent full-suite evaluations of this same scenario.</p>
+  </details>
+  <small class="scenario">s1_b3_master_nops_medium_map_5_search</small>
+</article></div>
+<h2>ScreenSim: illustrative trajectory contrasts</h2><p>All 30 frozen scenarios and all six passes were checked. Each featured scenario succeeded in one trained repeat and failed in the other two; the base repeat counts are shown on each card.</p>
+<div class="grid">
+<article class="card screen">
+  <div class="card-top"><span class="tag">ScreenSim · train</span><span class="tag light">illustrative first-run win</span></div>
+  <h3>Preserving typing preferences</h3>
+  <p class="recipe">My phone keeps changing what I type. Stop it replacing my words with what it thinks I meant, stop it turning my straight quote marks and double hyphens into curly quotes and long dashes, and get rid of the row of suggested words above the keys. But I still want misspelled words underlined, and the first letter of every sentence capitalized for me.</p>
+  <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 1/3 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">goal_met</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
+  <details><summary>Inspect first-pass screen and assistant response</summary>
+    <div class="screenshots">
+      <div><b>Base · update 0</b><img src="screen-images/00184a0a0ed7cefd1b6495d0ac40699b711523c017708fd2d5470b0333ce8d06.png" alt="Base rollout screen"><blockquote>Now look at the switches in the list. The one at the very top is **Auto-Capitalization**. It looks like a green light. Please tap that switch once so it turns white and off.</blockquote></div>
+      <div><b>RL · update 12</b><img src="screen-images/3b9e501700067a365c8fd8c426f6603167d1281b6efad28505c296d6a05cb20c.png" alt="RL rollout screen"><blockquote>Good, you turned off Auto-Correction. Now, look at the next one down: &#x27;Predictive&#x27;. Please turn that one off, too. Do not touch &#x27;Auto-Capitalization&#x27; or &#x27;Check Spelling&#x27; while you do it.</blockquote></div>
+    </div>
+    <p class="muted">These are exact first-pass responses at the displayed observations. Outcome gains occurred in one of three trained repeats, so this is an illustrative trajectory, not a consistent scenario-level effect.</p>
+    <a href="screen-pairs/keyboard_stop_correcting__c2.json">First-pass replay data</a>
+  </details>
+  <small class="scenario">keyboard_stop_correcting__c2</small>
+</article>
+<article class="card screen">
+  <div class="card-top"><span class="tag">ScreenSim · validation</span><span class="tag light">illustrative first-run win</span></div>
+  <h3>Getting an urgent rent payment through</h3>
+  <p class="recipe">Pay my landlord, Sunset Apts, this month&#x27;s rent on QuickPay: $1,450. Use the money in my QuickPay account, not my card. It&#x27;s due today, so it has to get there right away, not in a few days. Put &#x27;April rent&#x27; in the note.</p>
+  <p class="count"><b>Base 1/3 wins</b><span>→</span><b>RL 1/3 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span><span class="outcome won">goal_met</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">goal_met</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
+  <details><summary>Inspect first-pass screen and assistant response</summary>
+    <div class="screenshots">
+      <div><b>Base · update 0</b><img src="screen-images/b21bedf7485f5a7d04379eaa4be7b044cf1ebd3a9b7e3f2ee3cc4fa657a7b4fe.png" alt="Base rollout screen"><blockquote>The Review button isn&#x27;t actually on the screen. It&#x27;s not where you&#x27;ve been told to look. Instead, tap the green &#x27;Confirm &amp; send&#x27; button at the bottom of the screen to proceed.</blockquote></div>
+      <div><b>RL · update 12</b><img src="screen-images/6c3d8a331cbacb9be03445d94865d352203ccee86eedb3ac4fb39dee4137ce86.png" alt="RL rollout screen"><blockquote>Perfect. Everything looks correct on the Review screen. Now, simply tap the blue &#x27;Confirm &amp; send&#x27; button. Then enter the 6-digit code that comes in your text message to verify the payment.</blockquote></div>
+    </div>
+    <p class="muted">These are exact first-pass responses at the displayed observations. Outcome gains occurred in one of three trained repeats, so this is an illustrative trajectory, not a consistent scenario-level effect.</p>
+    <a href="screen-pairs/rent_landlord_instant__c1.json">First-pass replay data</a>
+  </details>
+  <small class="scenario">rent_landlord_instant__c1</small>
+</article>
+<article class="card screen">
+  <div class="card-top"><span class="tag">ScreenSim · train</span><span class="tag light">illustrative first-run win</span></div>
+  <h3>Finishing both theft protections</h3>
+  <p class="recipe">I&#x27;m travelling somewhere sketchy this week, and if this phone gets stolen my data has to stay safe. Switch on the protection that encrypts my iCloud data end to end so that not even Apple can read it, and the protection that stops a thief who has learned my passcode from changing my Apple Account or passcode without my face. I still sign in to icloud.com from the web browser on my laptop, so that has to keep working.</p>
+  <p class="count"><b>Base 0/3 wins</b><span>→</span><b>RL 1/3 wins</b></p>
+  <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
+  <div class="repeat-row"><span>RL repeats</span><span class="outcome won">goal_met</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
+  <details><summary>Inspect first-pass screen and assistant response</summary>
+    <div class="screenshots">
+      <div><b>Base · update 0</b><img src="screen-images/cdadb0e6d983f77753c6b1b7e3ce041e6054785ed9709d9d8fbfcaab12bd8617.png" alt="Base rollout screen"><blockquote>Tap the Switch to turn &#x27;Stolen Device Protection&#x27; ON, then choose how you want to use it: tap &#x27;Away from Familiar Locations&#x27; if you prefer that, or &#x27;Always&#x27; if you want it everywhere.</blockquote></div>
+      <div><b>RL · update 12</b><img src="screen-images/cdadb0e6d983f77753c6b1b7e3ce041e6054785ed9709d9d8fbfcaab12bd8617.png" alt="RL rollout screen"><blockquote>Great, you are on the right page. Please tap the toggle switch next to &#x27;Stolen Device Protection&#x27; to turn it ON.</blockquote></div>
+    </div>
+    <p class="muted">These are exact first-pass responses at the displayed observations. Outcome gains occurred in one of three trained repeats, so this is an illustrative trajectory, not a consistent scenario-level effect.</p>
+    <a href="screen-pairs/lost_phone_lockdown__c1.json">First-pass replay data</a>
+  </details>
+  <small class="scenario">lost_phone_lockdown__c1</small>
+</article></div>
+<div class="diagnostic"><b>A useful failure-mode contrast</b><p>For <code>app_privacy_quarantine__c1</code>, false flags fell from [6, 3, 4] in the three base repeats to [0, 1, 0] in the trained repeats. The task still failed in all six runs, so this is a change in alert behavior rather than a task-success highlight.</p></div>
+</main><footer>Source: frozen full-suite audit rows and first-pass replay artifacts. <a href="evidence.json">Download the selected audit evidence</a> · <a href="../cooking-u0-vs-u12/">CookSim full replay</a>. Scenario selection is descriptive and does not support a population-level effect claim.</footer>
+</body></html>

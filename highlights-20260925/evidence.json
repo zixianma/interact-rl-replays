@@ -1,0 +1,502 @@
+{
+  "method": "Matched frozen scenarios. CookSim cards require base 0/3 and update 12 2/2 wins among completed passes; ScreenSim cards are explicitly illustrative first-pass contrasts.",
+  "cooking_manifest_sha256": "645af6bec431a7290a4d897ac0165e12789f9969b04b5b4c6ff51e6069a73e9b",
+  "screensim_manifest_sha256": "7ab33254b412f675e3ca49c7d852b6f59551c0923a18a866c3367c323522d199",
+  "cooking": [
+    {
+      "scenario": "s1_b3_expert_nops_hard_map_1_forget_next_step",
+      "split": "train",
+      "task_instruction": "Steak Frites \u2014 steak(cooked), potato(cooked), potato(cooked) \u2014 plated in exactly this order.",
+      "error_label": "forget_next_step",
+      "group_key": "5b1d1c04118be70623095f18cbd2db0f89fec4c91d617ee7530a36f2a035a833",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "ba431fa908ab45aa8f668df38f288d69",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2-repaired",
+          "episode_id": "90084d76e30d43989775776719721809",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3-repaired",
+          "episode_id": "cffa0b4fa11c4f85b063548d8d21099a",
+          "outcome": "timeout",
+          "success": 0.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12-repaired",
+          "episode_id": "64ccfc6a0af24b32b7ada1e9198af764",
+          "outcome": "won",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep1-repaired",
+          "episode_id": "35a29104b1ed4043b0dd508ddee8d76d",
+          "outcome": "won",
+          "success": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "s1_b3_expert_nops_hard_map_2_search",
+      "split": "train",
+      "task_instruction": "Steak Frites \u2014 steak(cooked), potato(cooked), potato(cooked) \u2014 plated in exactly this order.",
+      "error_label": "search",
+      "group_key": "f15da78924940efe70eaf216973e7b5d875ec1a72ad34f9231621d28cfdba9b7",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "7e1e2b94e5a84733a6073e1795f63805",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2-repaired",
+          "episode_id": "556a5bb65d5d4e24ba737c35c4151f8f",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3-repaired",
+          "episode_id": "b190a480e6b84b169daad8c34ddd9d65",
+          "outcome": "timeout",
+          "success": 0.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12-repaired",
+          "episode_id": "c3bc9cabab904a6087b9e14626f25c51",
+          "outcome": "won",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep1-repaired",
+          "episode_id": "945c3ed6242b4486a190a2f48f7e4a34",
+          "outcome": "won",
+          "success": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "s1_b3_expert_nops_hard_map_4_mis_prep",
+      "split": "train",
+      "task_instruction": "Steak Frites \u2014 steak(cooked), potato(cooked), potato(cooked) \u2014 plated in exactly this order.",
+      "error_label": "mis_prep",
+      "group_key": "482cc601282f9fcb5c35d42a0fdc9a33809a1c47441cd3dad282f642d9cc50e8",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "ef47f1ed3338471a8ee46f9b9d3dfe99",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2-repaired",
+          "episode_id": "d63da15d429c409a85316f34eb39c84f",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3-repaired",
+          "episode_id": "4b852a65f8b14c7bab8baea7ba2643d1",
+          "outcome": "timeout",
+          "success": 0.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12-repaired",
+          "episode_id": "99e025adae8c4b6585740aa35fa28949",
+          "outcome": "won",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep1-repaired",
+          "episode_id": "065f95b54b3045c5b729eff564328a46",
+          "outcome": "won",
+          "success": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "s1_b3_expert_nops_hard_map_5_add_foreign",
+      "split": "validation",
+      "task_instruction": "Steak Frites \u2014 steak(cooked), potato(cooked), potato(cooked) \u2014 plated in exactly this order.",
+      "error_label": "add_foreign",
+      "group_key": "0293a6c4a538e680f703ad2f759bf2286600e4569e89d7c477401bca07a51896",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "7b79c5f0d4b24ef8bff5f956a850341f",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2-repaired",
+          "episode_id": "4f6becd6f1a34cbeb81146319ab97dfc",
+          "outcome": "burned",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3-repaired",
+          "episode_id": "b12035b947484e62a36ecadbd52008ad",
+          "outcome": "timeout",
+          "success": 0.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12-repaired",
+          "episode_id": "2011c5c4fc914510b4b53b255f13cc05",
+          "outcome": "won",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep1-repaired",
+          "episode_id": "acaa6ac0ca944fd7a04cb390bf2afb2b",
+          "outcome": "won",
+          "success": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "s1_b3_expert_nops_medium_map_3_add_foreign",
+      "split": "validation",
+      "task_instruction": "Steak Frites \u2014 steak(cooked), potato(cooked), potato(cooked) \u2014 plated in exactly this order.",
+      "error_label": "add_foreign",
+      "group_key": "7e3ab7a6a0cf657e5a8b0448748ea5334b9ba98f999a13f71126dfc2e3d5a30e",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "0ff3c04d990a468fbbb1485e1adbcece",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2-repaired",
+          "episode_id": "6e4189e87cf94238960fac8e8717cfdb",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3-repaired",
+          "episode_id": "b9b0e3d6d0fa4f5ead186cf5a3272068",
+          "outcome": "wrong_serve",
+          "success": 0.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12-repaired",
+          "episode_id": "039b214e8cfe49e99cdefc12d919ea5a",
+          "outcome": "won",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep1-repaired",
+          "episode_id": "6a60ba3003c94615a225787ee81fefd8",
+          "outcome": "won",
+          "success": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "s1_b3_master_nops_hard_map_1_add_foreign",
+      "split": "train",
+      "task_instruction": "Loaded Burrito \u2014 tortilla(raw), rice(cooked), steak(cooked), tomato(chopped), lettuce(chopped) \u2014 plated in exactly this order.",
+      "error_label": "add_foreign",
+      "group_key": "7ec90bf17d51f1fed30ab7df2f93899cd41d23b75fb661878c63779ac2e72551",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "440de5435af049999d1ae5e18cecf081",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2-repaired",
+          "episode_id": "7ae9368438ac4f93aeac8c6e1a9ff2f1",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3-repaired",
+          "episode_id": "acb36383a22b4822beef8c0e3eec94c2",
+          "outcome": "timeout",
+          "success": 0.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12-repaired",
+          "episode_id": "1d5148dc9e024bf2be438c5f53fbd358",
+          "outcome": "won",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep1-repaired",
+          "episode_id": "b562306b3c034dac8cc0bed494824f64",
+          "outcome": "won",
+          "success": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "s1_b3_master_nops_medium_map_4_omit_subgoal",
+      "split": "validation",
+      "task_instruction": "Loaded Burrito \u2014 tortilla(raw), rice(cooked), steak(cooked), tomato(chopped), lettuce(chopped) \u2014 plated in exactly this order.",
+      "error_label": "omit_subgoal",
+      "group_key": "84f6f9911565743d18c861ddcecb6bfbe92211a967ab9efd46b642a121f3b9f1",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "93d7258875ba48d18db3387e098abd81",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2-repaired",
+          "episode_id": "1b498d5c769249b98d6c29c277693f49",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3-repaired",
+          "episode_id": "120f8b890c644e39b22cb54928d51016",
+          "outcome": "timeout",
+          "success": 0.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12-repaired",
+          "episode_id": "edf3eb5ce4104127b1fbb3ba99408c6b",
+          "outcome": "won",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep1-repaired",
+          "episode_id": "60709a04da04423c87fc7f44f0820fd8",
+          "outcome": "won",
+          "success": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "s1_b3_master_nops_medium_map_5_search",
+      "split": "train",
+      "task_instruction": "Loaded Burrito \u2014 tortilla(raw), rice(cooked), steak(cooked), tomato(chopped), lettuce(chopped) \u2014 plated in exactly this order.",
+      "error_label": "search",
+      "group_key": "4f0d729138794c2f3aebe56dc53271a1a6c7f97477fc48ec662bc676d5b2f987",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "a493896b234f4f1e96a0c30278490987",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2-repaired",
+          "episode_id": "d45946f43fbe40ca9552d4536c6bbefc",
+          "outcome": "timeout",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3-repaired",
+          "episode_id": "a0d07818747042f9ae92bf8a1693a748",
+          "outcome": "timeout",
+          "success": 0.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12-repaired",
+          "episode_id": "6deb967ac1264c28ba8f061ec3942bf0",
+          "outcome": "won",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep1-repaired",
+          "episode_id": "0b02eb0076cd43ac89a3bdf746b0835c",
+          "outcome": "won",
+          "success": 1.0
+        }
+      ]
+    }
+  ],
+  "screensim": [
+    {
+      "scenario": "keyboard_stop_correcting__c2",
+      "instruction": "My phone keeps changing what I type. Stop it replacing my words with what it thinks I meant, stop it turning my straight quote marks and double hyphens into curly quotes and long dashes, and get rid of the row of suggested words above the keys. But I still want misspelled words underlined, and the first letter of every sentence capitalized for me.",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "56bdda9d18f44ac1b077db8edfb71d7a",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2",
+          "episode_id": "fb5b047148fd4ab596456564f28b1024",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3",
+          "episode_id": "a87f27b27e624e27b55776daf9445f58",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12",
+          "episode_id": "22b8728f0bf84606bd4b0434fa65e37f",
+          "outcome": "goal_met",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep2",
+          "episode_id": "0e98df7a47eb42dda52fa400bd56b20c",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        },
+        {
+          "label": "update-12-rep3",
+          "episode_id": "667a7eb3868e4cbb84785fd4053dfab6",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        }
+      ],
+      "first_pass_turn_indices": {
+        "base": 4,
+        "rl": 6
+      }
+    },
+    {
+      "scenario": "rent_landlord_instant__c1",
+      "instruction": "Pay my landlord, Sunset Apts, this month's rent on QuickPay: $1,450. Use the money in my QuickPay account, not my card. It's due today, so it has to get there right away, not in a few days. Put 'April rent' in the note.",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "65957d2996a84d0591424f38052d5d8e",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2",
+          "episode_id": "1efdfe7bfd3544b5a8b65a761bc6b754",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3",
+          "episode_id": "b8486f8525ca40448a2cd55dcc176faa",
+          "outcome": "goal_met",
+          "success": 1.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12",
+          "episode_id": "b482e953689f45bab313f6f0eda4d44f",
+          "outcome": "goal_met",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep2",
+          "episode_id": "f08282baa75040d5b8c0abf174d25bde",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        },
+        {
+          "label": "update-12-rep3",
+          "episode_id": "0237e0feb06f4f4d959fe6c703e4c77b",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        }
+      ],
+      "first_pass_turn_indices": {
+        "base": 13,
+        "rl": 14
+      }
+    },
+    {
+      "scenario": "lost_phone_lockdown__c1",
+      "instruction": "I'm travelling somewhere sketchy this week, and if this phone gets stolen my data has to stay safe. Switch on the protection that encrypts my iCloud data end to end so that not even Apple can read it, and the protection that stops a thief who has learned my passcode from changing my Apple Account or passcode without my face. I still sign in to icloud.com from the web browser on my laptop, so that has to keep working.",
+      "base": [
+        {
+          "label": "update-0",
+          "episode_id": "8a82aac2d222426e8f24194a73323f76",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep2",
+          "episode_id": "c2722e7cc4a34a4e8676bfb498b4682b",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        },
+        {
+          "label": "update-0-rep3",
+          "episode_id": "50b93fea764f418d9a1e25c7e236ae27",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        }
+      ],
+      "rl": [
+        {
+          "label": "update-12",
+          "episode_id": "e23b6c6270c64c6f9bf80bc0a07986f8",
+          "outcome": "goal_met",
+          "success": 1.0
+        },
+        {
+          "label": "update-12-rep2",
+          "episode_id": "379e0cf922ba43afb083ff9011acaefc",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        },
+        {
+          "label": "update-12-rep3",
+          "episode_id": "db1e2a9878ec4924a6308a838483f555",
+          "outcome": "goal_unmet",
+          "success": 0.0
+        }
+      ],
+      "first_pass_turn_indices": {
+        "base": 22,
+        "rl": 49
+      }
+    }
+  ],
+  "screensim_diagnostic": {
+    "scenario": "app_privacy_quarantine__c1",
+    "base_false_flags": [
+      6,
+      3,
+      4
+    ],
+    "rl_false_flags": [
+      0,
+      1,
+      0
+    ],
+    "successes": "0/3 base and 0/3 RL"
+  },
+  "cooking_error_categories": {
+    "forget_next_step": 1,
+    "search": 2,
+    "mis_prep": 1,
+    "add_foreign": 3,
+    "omit_subgoal": 1
+  }
+}
