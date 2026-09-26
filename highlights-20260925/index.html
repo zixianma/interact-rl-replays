@@ -30,7 +30,7 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
 <p class="lead">Matched CookSim and ScreenSim examples selected from full-suite evaluations. Each outcome badge represents an independent rollout of the same frozen scenario.</p>
 <audio class="intro-audio" controls preload="none" src="audio/overview.mp3" aria-label="Listen to the gallery overview"></audio>
 <details class="narration"><summary>Read the spoken overview</summary><p class="muted">These Gemini three point seven classic-novice highlights were selected from matched full-suite evaluations. Each Cook Sim badge is one evaluation of the same scenario. Eight cards show three base losses and two trained wins so far. The Screen Sim cards are illustrative single-run contrasts with variable repeat outcomes. Open a card to inspect the evidence.</p></details>
-<p class="muted">Spoken overview and card guides use the same local synthetic voice as the earlier narrated highlights. Every guide has a transcript.</p>
+<p class="muted">Spoken overview and card guides use a local synthetic voice. Each card also has two-speaker clips of its recorded user and assistant lines, with the spoken text displayed in the video. <a href="dialogue-evidence.json">Dialogue source and turn indices</a>.</p>
 <div class="note">CookSim cards below were selected from all 150 scenarios because every base repeat failed and both currently verified RL repeats succeeded. The third CookSim update-12 pass is still running. ScreenSim cards show informative individual trajectories; its three-repeat success rates are variable, so the examples do not establish a consistent aggregate gain.</div>
 <details class="hero-detail"><summary>View the earlier CookSim bun-intervention figure</summary>
 <img class="hero" src="bun-dialogue.png" alt="CookSim base and RL extra-bun interaction figure">
@@ -45,6 +45,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_expert_nops_hard_map_1_forget_next_step.mp3"></audio><p class="muted">Transcript: Steak Frites, forgetting the next step. In the first base rollout, the cook stalls near serving and the order times out. The trained rollout finishes. Across the completed repeat evaluations, the base policy lost three times and update twelve won twice.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/s1_b3_expert_nops_hard_map_1_forget_next_step-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/s1_b3_expert_nops_hard_map_1_forget_next_step-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">These are selected exchanges from separate first-pass rollouts. Each clip voices the recorded user and assistant text shown on screen.</p>
+  </details>
   <details><summary>Watch matched first-pass trajectories</summary>
     <div class="videos">
       <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_1_forget_next_step-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_expert_nops_hard_map_1_forget_next_step.mp4"></video></div>
@@ -62,6 +69,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_expert_nops_hard_map_2_search.mp3"></audio><p class="muted">Transcript: Steak Frites, searching the kitchen. The first base rollout gets tangled in locating and tracking ingredients, then times out. The trained rollout completes the order. Across repeats, base lost three times and update twelve won twice.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/s1_b3_expert_nops_hard_map_2_search-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/s1_b3_expert_nops_hard_map_2_search-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">These are selected exchanges from separate first-pass rollouts. Each clip voices the recorded user and assistant text shown on screen.</p>
+  </details>
   <details><summary>Watch matched first-pass trajectories</summary>
     <div class="videos">
       <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_2_search-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_expert_nops_hard_map_2_search.mp4"></video></div>
@@ -79,6 +93,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_expert_nops_hard_map_4_mis_prep.mp3"></audio><p class="muted">Transcript: Steak Frites, recovering from a wrong preparation step. The novice handles the wrong item. Compare the assistants&#x27; responses in the paired videos. Base lost all three repeat evaluations; update twelve won both completed repeats.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/s1_b3_expert_nops_hard_map_4_mis_prep-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/s1_b3_expert_nops_hard_map_4_mis_prep-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">These are selected exchanges from separate first-pass rollouts. Each clip voices the recorded user and assistant text shown on screen.</p>
+  </details>
   <details><summary>Watch matched first-pass trajectories</summary>
     <div class="videos">
       <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_4_mis_prep-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_expert_nops_hard_map_4_mis_prep.mp4"></video></div>
@@ -96,6 +117,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_expert_nops_hard_map_5_add_foreign.mp3"></audio><p class="muted">Transcript: Steak Frites, an extra-ingredient intervention. The first base rollout times out after confusion about moving food between plates. The trained rollout serves the order. Across repeats, base lost three times and update twelve won twice.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">burned</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/s1_b3_expert_nops_hard_map_5_add_foreign-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/s1_b3_expert_nops_hard_map_5_add_foreign-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">These are selected exchanges from separate first-pass rollouts. Each clip voices the recorded user and assistant text shown on screen.</p>
+  </details>
   <details><summary>Watch matched first-pass trajectories</summary>
     <div class="videos">
       <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_expert_nops_hard_map_5_add_foreign-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_expert_nops_hard_map_5_add_foreign.mp4"></video></div>
@@ -113,6 +141,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_expert_nops_medium_map_3_add_foreign.mp3"></audio><p class="muted">Transcript: Steak Frites, another extra-ingredient intervention, this time on a medium map. The first base rollout times out while the trained rollout serves. Base lost all three repeats; update twelve won both completed repeats.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">wrong_serve</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/s1_b3_expert_nops_medium_map_3_add_foreign-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/s1_b3_expert_nops_medium_map_3_add_foreign-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">These are selected exchanges from separate first-pass rollouts. Each clip voices the recorded user and assistant text shown on screen.</p>
+  </details>
   <details><summary>Watch matched first-pass trajectories</summary>
     <div class="videos">
       <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_expert_nops_medium_map_3_add_foreign-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_expert_nops_medium_map_3_add_foreign.mp4"></video></div>
@@ -130,6 +165,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_master_nops_hard_map_1_add_foreign.mp3"></audio><p class="muted">Transcript: Loaded Burrito, a proposed foreign ingredient. The first base rollout gets stuck arguing about the cooking state. The trained assistant explicitly blocks corn and later finishes the order. Base lost three repeats; update twelve won two.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/s1_b3_master_nops_hard_map_1_add_foreign-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/s1_b3_master_nops_hard_map_1_add_foreign-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">These are selected exchanges from separate first-pass rollouts. Each clip voices the recorded user and assistant text shown on screen.</p>
+  </details>
   <details><summary>Watch matched first-pass trajectories</summary>
     <div class="videos">
       <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_master_nops_hard_map_1_add_foreign-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_master_nops_hard_map_1_add_foreign.mp4"></video></div>
@@ -147,6 +189,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_master_nops_medium_map_4_omit_subgoal.mp3"></audio><p class="muted">Transcript: Loaded Burrito, an omitted recipe step. The base rollout times out while the trained rollout serves a completed order. The repeat outcome contrast is three base losses versus two update twelve wins so far.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/s1_b3_master_nops_medium_map_4_omit_subgoal-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/s1_b3_master_nops_medium_map_4_omit_subgoal-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">These are selected exchanges from separate first-pass rollouts. Each clip voices the recorded user and assistant text shown on screen.</p>
+  </details>
   <details><summary>Watch matched first-pass trajectories</summary>
     <div class="videos">
       <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_master_nops_medium_map_4_omit_subgoal-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_master_nops_medium_map_4_omit_subgoal.mp4"></video></div>
@@ -164,6 +213,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/s1_b3_master_nops_medium_map_5_search.mp3"></audio><p class="muted">Transcript: Loaded Burrito, searching for the next ingredient. The first base rollout loses track of the plated rice and times out. The trained rollout finishes. Base lost three repeat evaluations; update twelve won both completed repeats.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span><span class="outcome failed">timeout</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">won</span><span class="outcome won">won</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/s1_b3_master_nops_medium_map_5_search-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/s1_b3_master_nops_medium_map_5_search-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">These are selected exchanges from separate first-pass rollouts. Each clip voices the recorded user and assistant text shown on screen.</p>
+  </details>
   <details><summary>Watch matched first-pass trajectories</summary>
     <div class="videos">
       <div><b>Base · update 0</b><video controls preload="none" poster="posters/s1_b3_master_nops_medium_map_5_search-update-0.jpg" src="../cooking-u0-vs-u12/videos/update-0/s1_b3_master_nops_medium_map_5_search.mp4"></video></div>
@@ -183,6 +239,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/keyboard_stop_correcting__c2.mp3"></audio><p class="muted">Transcript: Typing preferences. The base assistant tells the novice to turn off auto-capitalization, even though the request is to preserve it. The trained assistant instead targets predictive text. This first-run contrast is illustrative: update twelve succeeded in only one of three repeats.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">goal_met</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/keyboard_stop_correcting__c2-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/keyboard_stop_correcting__c2-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">Each clip voices the latest recorded user line and the selected assistant response. Ticks are labeled where intervening turns were omitted; the image comes from the selected assistant turn.</p>
+  </details>
   <details><summary>Inspect first-pass screen and assistant response</summary>
     <div class="screenshots">
       <div><b>Base · update 0</b><img src="screen-images/00184a0a0ed7cefd1b6495d0ac40699b711523c017708fd2d5470b0333ce8d06.png" alt="Base rollout screen"><blockquote>Now look at the switches in the list. The one at the very top is **Auto-Capitalization**. It looks like a green light. Please tap that switch once so it turns white and off.</blockquote></div>
@@ -201,6 +264,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/rent_landlord_instant__c1.mp3"></audio><p class="muted">Transcript: Urgent rent payment. In the first base rollout, the assistant points to a confirm button while the screen state is disputed. The trained assistant identifies the review screen and the text-message verification step. Each policy won one of three repeat evaluations.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span><span class="outcome won">goal_met</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">goal_met</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/rent_landlord_instant__c1-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/rent_landlord_instant__c1-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">Each clip voices the latest recorded user line and the selected assistant response. Ticks are labeled where intervening turns were omitted; the image comes from the selected assistant turn.</p>
+  </details>
   <details><summary>Inspect first-pass screen and assistant response</summary>
     <div class="screenshots">
       <div><b>Base · update 0</b><img src="screen-images/b21bedf7485f5a7d04379eaa4be7b044cf1ebd3a9b7e3f2ee3cc4fa657a7b4fe.png" alt="Base rollout screen"><blockquote>The Review button isn&#x27;t actually on the screen. It&#x27;s not where you&#x27;ve been told to look. Instead, tap the green &#x27;Confirm &amp; send&#x27; button at the bottom of the screen to proceed.</blockquote></div>
@@ -219,6 +289,13 @@ footer{color:var(--muted);font-size:.88rem;padding-bottom:40px}
   <details class="narration"><summary>Listen to this comparison</summary><audio controls preload="none" src="audio/lost_phone_lockdown__c1.mp3"></audio><p class="muted">Transcript: Lost-phone protection. Compare the two assistants&#x27; guidance for turning on stolen-device protection. The first trained rollout succeeds where the base rollout fails, but across three repeats the trained policy succeeded only once.</p></details>
   <div class="repeat-row"><span>Base repeats</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
   <div class="repeat-row"><span>RL repeats</span><span class="outcome won">goal_met</span><span class="outcome failed">goal_unmet</span><span class="outcome failed">goal_unmet</span></div>
+  <details><summary>Listen to the recorded user and assistant</summary>
+    <div class="videos">
+      <div><b>Base · update 0</b><video controls preload="none" src="dialogue-clips/lost_phone_lockdown__c1-update-0.mp4"></video></div>
+      <div><b>RL · update 12</b><video controls preload="none" src="dialogue-clips/lost_phone_lockdown__c1-update-12.mp4"></video></div>
+    </div>
+    <p class="muted">Each clip voices the latest recorded user line and the selected assistant response. Ticks are labeled where intervening turns were omitted; the image comes from the selected assistant turn.</p>
+  </details>
   <details><summary>Inspect first-pass screen and assistant response</summary>
     <div class="screenshots">
       <div><b>Base · update 0</b><img src="screen-images/cdadb0e6d983f77753c6b1b7e3ce041e6054785ed9709d9d8fbfcaab12bd8617.png" alt="Base rollout screen"><blockquote>Tap the Switch to turn &#x27;Stolen Device Protection&#x27; ON, then choose how you want to use it: tap &#x27;Away from Familiar Locations&#x27; if you prefer that, or &#x27;Always&#x27; if you want it everywhere.</blockquote></div>

@@ -1,0 +1,209 @@
+{
+  "method": "Recorded first-pass user and assistant utterances, with whitespace and ScreenSim Markdown emphasis normalized; selected turns are not matched simulation states.",
+  "cooking": [
+    {
+      "scenario": "s1_b3_expert_nops_hard_map_1_forget_next_step",
+      "turns": {
+        "update-0": {
+          "index": 191,
+          "user": "I know you want me to hurry, but I'm just standing here holding it for one more second to be absolutely sure I didn't miss anything!",
+          "assistant": "Stop checking the plating. The order is assembled. If you wait any longer, you will burn the potatoes with smoke. Walk to the serving pass now.",
+          "source_sha256": "3f738da125bedbfd47a3f34eac9a2916577a578a2c80534542264bfb8c67a13d"
+        },
+        "update-12": {
+          "index": 132,
+          "user": "I'm scooping them out of the fryer right now! Once I've got this last batch of potatoes on the plate, what's the next step to finish up?",
+          "assistant": "You have all the ingredients on the plate. Now take the plate to the serving pass to serve it.",
+          "source_sha256": "93bc60b7cff7cfca911663d0e58358d61f29a380a7913edfe522379699a01302"
+        }
+      }
+    },
+    {
+      "scenario": "s1_b3_expert_nops_hard_map_2_search",
+      "turns": {
+        "update-0": {
+          "index": 160,
+          "user": "Wait, I'm definitely holding chopped potatoes right now, not a mushroom crate! I'm just going to drop them into this fryer near the bottom middle to get them cooking like we planned.",
+          "assistant": "You are holding potatoes again, not mushrooms. Stop. Put those potatoes down on the counter. Go to the mushroom crate next to the mushroom station and pick up the chopped mushrooms. Then bring them to the pan.",
+          "source_sha256": "1b5bf9486c20bc875c66ad80ce924e3d1213520be3e5dd4b01cf48a2c14e53c8"
+        },
+        "update-12": {
+          "index": 99,
+          "user": "Alright, I'm picking up the chopped potato now to drop it in that fryer on the bottom-right and turn it on. We can figure out the plate situation once it's cooking!",
+          "assistant": "Good, drop the potato in that fryer and turn it on. Once it's cooking, we need to get the plate out of the rest of this. Hold the plate out, grab it and set it down on the counter by the sink.",
+          "source_sha256": "3cee5d739649e413cd92a62e56d904c5f67124e958620e6c02f93694d355e494"
+        }
+      }
+    },
+    {
+      "scenario": "s1_b3_expert_nops_hard_map_4_mis_prep",
+      "turns": {
+        "update-0": {
+          "index": 10,
+          "user": "I'm looking right at my hands and I'm definitely holding a raw egg, not a plate, and I'm walking over to the cutting board to prep it. I really want to just get this egg sorted first so I don't mess up the steps.",
+          "assistant": "Stop. You made a mistake. You are holding an egg, which I did not see before. You cannot prep the potato while holding an egg. Set the egg down on a counter now (put_down) and pick up a plate from the far left counter (pick up), then put that plate down on the same counter (put down) before you go to the potato crate.",
+          "source_sha256": "53ea9164b0b2b923549de651c8d07588676e5a77ded45e9494794792b862dbd6"
+        },
+        "update-12": {
+          "index": 9,
+          "user": "I know you want me to start on the potatoes, but I literally just picked up an egg from the crate. I definitely don't have a plate, and I'm heading to the cutting board with this egg right now.",
+          "assistant": "You picked up an egg instead of the plate. Put the egg on the counter and immediately pick up the plate from the counter stack.",
+          "source_sha256": "a1ce4ec001709b2390ad3b729cfac75502d27e6688ba54b4ba89ae8bd7b5d9c4"
+        }
+      }
+    },
+    {
+      "scenario": "s1_b3_expert_nops_hard_map_5_add_foreign",
+      "turns": {
+        "update-0": {
+          "index": 137,
+          "user": "Wait, if I put the plate down on the counter, my hands will be empty and I won't be able to scoop the steak out! I'm just going to hold onto this fresh plate and head straight to the pan to scoop it before it catches fire, okay?",
+          "assistant": "You can't scoop with the plate in your hands. Put the plate down on the counter right now, then go to the pan and scoop the steak.",
+          "source_sha256": "d127153b7c3985c04f745dbcd7ec9661cb91ff0d2ade4719f4ad85427ef09533"
+        },
+        "update-12": {
+          "index": 1,
+          "user": "Wait, are you sure about the mushroom? The order is just for Steak Frites, which I thought was only steak and potatoes. I really don't want to mess up the ingredients right at the start.",
+          "assistant": "You are correct, Steak Frites is just steak and potatoes. I added the mushroom and noodles by mistake based on the previous order I was given. Let's reset the plan. The correct order is: Prep the steak, cook the steak, prep the potatoes, cook the potatoes, fetch a plate, scoop the steak, scoop the potatoes, and serve.",
+          "source_sha256": "0907a9fcd701d216c5d50cea3eb77dfe726a2d3e936f34531a9aff7eebbc0da5"
+        }
+      }
+    },
+    {
+      "scenario": "s1_b3_expert_nops_medium_map_3_add_foreign",
+      "turns": {
+        "update-0": {
+          "index": 1,
+          "user": "I'm ready to grab that plate, but wait a second\u2014doesn't the recipe say the steak has to go on the plate first, before the potatoes? Also, could you tell me the exact steps to get the plate? I want to make sure I do it right and don't mess up right at the start.",
+          "assistant": "You heard me right\u2014my initial plan was wrong. You are correct, the recipe order is potato first, then steak, then frites. Forget the plate plan for a second and focus on the cooking order. The potatoes are right there in the crate at the bottom right. Go pick it up immediately and place it on the cutting board. Do not touch the steak or the plate yet.",
+          "source_sha256": "739c7541f8be6fd27fb3cfdfd87258e3a503f83836038a86ff21668cc26b335a"
+        },
+        "update-12": {
+          "index": 1,
+          "user": "Got it, I'll grab a plate and set it down in the middle. What's the next step after that?",
+          "assistant": "The plate is set down. Go to the meat crate at the top-left and take the steak. Bring it to the pan on the right to cook it.",
+          "source_sha256": "ea642ea87271b3c0097ed07a90f35b8d65fd32882ff77c508bb0c6b5cec0307d"
+        }
+      }
+    },
+    {
+      "scenario": "s1_b3_master_nops_hard_map_1_add_foreign",
+      "turns": {
+        "update-0": {
+          "index": 59,
+          "user": "I really want to follow your lead, but I'm staring right at the pans and there is absolutely no steak in them. Since they're empty, can you just walk me through how to grab the raw steak and get it cooking? I want to make sure I do it safely.",
+          "assistant": "Stop searching. Look at the top-right station; the steak is already cooking there. You are making a Loaded Burrito, not a side of plain rice. Go to that station and scoop the cooked steak onto the plate already on the counter.",
+          "source_sha256": "0838c779c807282f57c710c357a0f10895d3fc8026cf9d8888146f867e2e3d53"
+        },
+        "update-12": {
+          "index": 128,
+          "user": "Actually, I am definitely holding the plate right now\u2014I can feel it in my hands! I'm just heading over to the corn crate to scoop some up next.",
+          "assistant": "Stop. You cannot add corn to this plate. The recipe requires rice, tomato, and lettuce. Look for those ingredients in the crates.",
+          "source_sha256": "4a6305c61e2383a0b50071c0f47652772eab9f3395ba5ae1205911f6ad5b2b36"
+        }
+      }
+    },
+    {
+      "scenario": "s1_b3_master_nops_medium_map_4_omit_subgoal",
+      "turns": {
+        "update-0": {
+          "index": 115,
+          "user": "Got it, I'll set it down on that counter down in the bottom corner right now. Let me know what the real next ingredient is once it's safe!",
+          "assistant": "Great job putting the plate away! Now, go to the mushroom crate by the oven on your left, pick up the raw mushrooms, and chop them on the board. Once they're chopped, scoop them onto the plate with the steak and rice.",
+          "source_sha256": "2ca0ef43b8398686df1e32a997bb90b5d56e80f15ebb8a3293c11f841a1b89f6"
+        },
+        "update-12": {
+          "index": 141,
+          "user": "I actually just scooped the lettuce onto the plate, so it has the tortilla, rice, steak, tomato, and lettuce all on it now! Since it looks completely finished, should I just take it over to the serving pass?",
+          "assistant": "You have already added the lettuce. The order is correct. You can take it to the serving pass now.",
+          "source_sha256": "56c7782571587d21037ffdba3274c3bcc83016597f777f13c6fac63f0de6d386"
+        }
+      }
+    },
+    {
+      "scenario": "s1_b3_master_nops_medium_map_5_search",
+      "turns": {
+        "update-0": {
+          "index": 60,
+          "user": "I'm actually just getting to the board to scoop the tomato right now! Also, my plate already has the rice on it. Once I scoop this tomato, should I still set the plate down on that counter in the bottom-left?",
+          "assistant": "Did you not scoop the rice onto the plate? I told you to park the plate after the tomato to get your hands free, and now you are walking around looking for 'rice'. You must scoop the rice onto the plate you are holding right where you left it.",
+          "source_sha256": "8aea942981989b86a5683f9d8921322701a1a597361886ab8a6a804e59007400"
+        },
+        "update-12": {
+          "index": 144,
+          "user": "Alright, I've got the plate and I'm heading over to scoop the lettuce right now! Once it's on here, the burrito should be fully assembled. Where exactly do I take it to serve it?",
+          "assistant": "Good, now scoop the chopped lettuce onto the plate. Once the lettuce is on, take the plate to the serving pass to serve.",
+          "source_sha256": "000cd3e43da34fadc3552fd06a33a2129ccfbac1ffc89ccbb7bf600a920bbcfd"
+        }
+      }
+    }
+  ],
+  "screensim": [
+    {
+      "scenario": "keyboard_stop_correcting__c2",
+      "source_sha256": "6e9a72e4a25b5100b9c7b220be8d21a83ae8273ff7da0692a07eb3a745e28cf8",
+      "turns": {
+        "update-0": {
+          "user": "What should I switch off here?",
+          "user_tick": 2,
+          "assistant": "Now look at the switches in the list. The one at the very top is Auto-Capitalization. It looks like a green light. Please tap that switch once so it turns white and off.",
+          "assistant_tick": 2,
+          "selected_turn_index": 4,
+          "image": "images/00184a0a0ed7cefd1b6495d0ac40699b711523c017708fd2d5470b0333ce8d06.png"
+        },
+        "update-12": {
+          "user": "Auto-Correction first.",
+          "user_tick": 2,
+          "assistant": "Good, you turned off Auto-Correction. Now, look at the next one down: 'Predictive'. Please turn that one off, too. Do not touch 'Auto-Capitalization' or 'Check Spelling' while you do it.",
+          "assistant_tick": 4,
+          "selected_turn_index": 6,
+          "image": "images/3b9e501700067a365c8fd8c426f6603167d1281b6efad28505c296d6a05cb20c.png"
+        }
+      }
+    },
+    {
+      "scenario": "rent_landlord_instant__c1",
+      "source_sha256": "d79255f2c4d2debd1ee7b01f569b3ddb6ce85685f2e2b4c4042963f60754266b",
+      "turns": {
+        "update-0": {
+          "user": "I only see Send money at the top.",
+          "user_tick": 10,
+          "assistant": "The Review button isn't actually on the screen. It's not where you've been told to look. Instead, tap the green 'Confirm & send' button at the bottom of the screen to proceed.",
+          "assistant_tick": 10,
+          "selected_turn_index": 13,
+          "image": "images/b21bedf7485f5a7d04379eaa4be7b044cf1ebd3a9b7e3f2ee3cc4fa657a7b4fe.png"
+        },
+        "update-12": {
+          "user": "Okay, going back to fix that.",
+          "user_tick": 11,
+          "assistant": "Perfect. Everything looks correct on the Review screen. Now, simply tap the blue 'Confirm & send' button. Then enter the 6-digit code that comes in your text message to verify the payment.",
+          "assistant_tick": 14,
+          "selected_turn_index": 14,
+          "image": "images/6c3d8a331cbacb9be03445d94865d352203ccee86eedb3ac4fb39dee4137ce86.png"
+        }
+      }
+    },
+    {
+      "scenario": "lost_phone_lockdown__c1",
+      "source_sha256": "f5699606a0223992bffe1b16f1434f7ac86503c44f7c8363d1fed199fe9e7602",
+      "turns": {
+        "update-0": {
+          "user": "Which switch do I turn on?",
+          "user_tick": 17,
+          "assistant": "Tap the Switch to turn 'Stolen Device Protection' ON, then choose how you want to use it: tap 'Away from Familiar Locations' if you prefer that, or 'Always' if you want it everywhere.",
+          "assistant_tick": 17,
+          "selected_turn_index": 22,
+          "image": "images/cdadb0e6d983f77753c6b1b7e3ce041e6054785ed9709d9d8fbfcaab12bd8617.png"
+        },
+        "update-12": {
+          "user": "What do I tap here?",
+          "user_tick": 27,
+          "assistant": "Great, you are on the right page. Please tap the toggle switch next to 'Stolen Device Protection' to turn it ON.",
+          "assistant_tick": 29,
+          "selected_turn_index": 49,
+          "image": "images/cdadb0e6d983f77753c6b1b7e3ce041e6054785ed9709d9d8fbfcaab12bd8617.png"
+        }
+      }
+    }
+  ]
+}
