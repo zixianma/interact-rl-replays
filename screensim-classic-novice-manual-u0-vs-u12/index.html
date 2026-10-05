@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScreenSim classic novice with manual · update 0 vs. 12</title>
+<style>
+:root{font:16px system-ui,sans-serif;color:#e7edf6;background:#101722}*{box-sizing:border-box}body{max-width:900px;margin:auto;padding:28px 22px;line-height:1.55}a{color:#9bd3fa}h1{font-size:2rem;line-height:1.2;margin:.5rem 0}p{color:#b9c8d9}.pill{display:inline-block;padding:4px 10px;border:1px solid #53677e;border-radius:20px;font-size:.8rem;margin-right:5px}table{width:100%;border-collapse:collapse;margin:1.5rem 0}th,td{text-align:left;padding:13px 10px;border-bottom:1px solid #40516a}th{color:#b9c8d9}td:first-child{font-weight:600}.note{padding:12px 15px;border-left:3px solid #65c7ff;background:#192b3c}small{color:#b9c8d9}
+</style>
+</head>
+<body>
+<a href="../">← ScreenSim replay index</a>
+<p><span class="pill">ScreenSim</span><span class="pill">Qwen3.5-4B</span><span class="pill">Gemini 3.7 Flash · classic novice</span><span class="pill">Manual enabled</span></p>
+<h1>Strict success at update 0 and update 12</h1>
+<p>The same frozen development and test scenarios were evaluated at both checkpoints. Each cell averages three independent passes, with one rollout per scenario in each pass.</p>
+<table>
+<thead><tr><th>Split</th><th>Scenarios per pass</th><th>Update 0</th><th>Update 12</th></tr></thead>
+<tbody>
+<tr><td>Development</td><td>32</td><td>4.17% <small>(2/32, 1/32, 1/32)</small></td><td>6.25% <small>(3/32, 1/32, 2/32)</small></td></tr>
+<tr><td>Test</td><td>30</td><td>8.89% <small>(3/30, 3/30, 2/30)</small></td><td>5.56% <small>(1/30, 1/30, 3/30)</small></td></tr>
+</tbody>
+</table>
+<p class="note">Strict success means the requested phone state was reached within the task's time limit, with no lasting change the owner did not ask for. The three passes characterize rollout variability on this fixed, small task set; the table is a proof-of-concept result rather than a precise population estimate.</p>
+<p><small>The training catalog contained 136 scenarios from 50 tasks; the 12-update run sampled 72 scenarios from 27 tasks. The curated manual was included in the assistant context. Development comprises 32 scenarios from 11 held-out tasks; test comprises 30 scenarios from 11 other held-out tasks. The user simulator is Gemini 3.7 Flash with the classic-novice persona.</small></p>
+</body>
+</html>
